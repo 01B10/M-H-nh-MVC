@@ -1,3 +1,3 @@
 <?php 
-    $routes["default_controller"] = "home";
+    $routes["default_controller"] = "product";
 ?>

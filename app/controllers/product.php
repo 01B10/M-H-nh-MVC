@@ -1,15 +1,25 @@
 <?php 
     class product extends controller{
+        public $data = [];
+
         public function index(){
             echo "List product!!";
         }
 
         public function list_product(){
             $product = $this->model("ProductModel");
-            $data = $product ->getProductLists();
-            echo "<pre>";
-            print_r($data);
-            echo "</pre>";
+            $dataproduct = $product ->getProductLists();
+            $this->data["product_list"] = $dataproduct;
+            $this->data["page_title"] = "DS SP";
+
+            //Render
+            $this-> render("product/list",$this->data);
+        }
+
+        public function detail($id=0){
+            $produc = $this->model("ProductModel");
+            $this->data["infor"] = $produc->getdetail($id);
+            $this->render("product/detail",$this->data);
         }
     }
 ?>

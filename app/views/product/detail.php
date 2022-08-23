@@ -1,0 +1,1 @@
+Chi Tiet San Pham <?php echo $infor?>
