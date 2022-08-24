@@ -18,8 +18,11 @@
 
         public function detail($id=0){
             $produc = $this->model("ProductModel");
-            $this->data["infor"] = $produc->getdetail($id);
-            $this->render("product/detail",$this->data);
+            $this->data["sub"]["infor"] = $produc->getdetail($id);
+            $this->data["content"] = "product/detail";
+            $this->render("layout/client_layout",$this->data);
+            // $this->render("product/detail",$this->data);
+            // $this->data["detail"];
         }
     }
 ?>
