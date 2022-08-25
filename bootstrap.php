@@ -14,6 +14,7 @@
 
 
     require "./configs/routes.php";
+    require "./core/route.php";
     require "./app/App.php";
     require "./core/controllers.php";
 ?>

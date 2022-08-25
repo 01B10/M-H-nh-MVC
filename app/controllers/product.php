@@ -21,8 +21,6 @@
             $this->data["sub"]["infor"] = $produc->getdetail($id);
             $this->data["content"] = "product/detail";
             $this->render("layout/client_layout",$this->data);
-            // $this->render("product/detail",$this->data);
-            // $this->data["detail"];
         }
     }
 ?>
